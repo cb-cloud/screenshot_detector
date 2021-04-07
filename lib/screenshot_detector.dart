@@ -8,8 +8,7 @@ import 'package:permission_handler/permission_handler.dart';
 /// プラグイン本体．ネイティブ側で実装したスクリーンショット検知機構を利用して，スクリーンショットが
 /// 撮影されたときに登録してあるコールバックを実行する．
 class ScreenshotDetector {
-  static const MethodChannel _channel =
-      const MethodChannel('cb-cloud/screenshot_detector');
+  final _channel = MethodChannel('cb-cloud/screenshot_detector');
 
   final _callbacks = <VoidCallback>[];
 

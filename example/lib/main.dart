@@ -14,9 +14,13 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final _screenShotDetector = ScreenshotDetector();
+
   @override
   void initState() {
     super.initState();
+
+    _screenShotDetector.addListener(() => print('detected'));
   }
 
   // TODO: Exampleを書く
@@ -33,5 +37,11 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _screenShotDetector.dispose();
+    super.dispose();
   }
 }
