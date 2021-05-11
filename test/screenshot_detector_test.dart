@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:screenshot_detector/screenshot_detector.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('screenshot_detector');
+  const MethodChannel channel = MethodChannel('cb-cloud/screenshot_detector');
 
   TestWidgetsFlutterBinding.ensureInitialized();
 
@@ -15,9 +15,5 @@ void main() {
 
   tearDown(() {
     channel.setMockMethodCallHandler(null);
-  });
-
-  test('getPlatformVersion', () async {
-    expect(await ScreenshotDetector.platformVersion, '42');
   });
 }
