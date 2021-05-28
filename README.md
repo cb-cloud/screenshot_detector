@@ -13,3 +13,6 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+
+# Copyright
+This package uses [abangfadli/shotwatch: Android Screenshot Watcher (Screenshot Detection)](https://github.com/abangfadli/shotwatch) for Screenshot detection on Android.
